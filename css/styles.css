@@ -164,6 +164,10 @@ body.dark-mode {
 .practice-btn:hover {
     background: var(--secondary);
 }
+.nav-btn.practice-btn.active {
+    background: var(--secondary);
+    color: white !important;
+}
 
 /* Main Content */
 .main-content {
