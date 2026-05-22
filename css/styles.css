@@ -9,8 +9,10 @@
     --border: #e2e8f0;        /* Slate 200 */
     --success: #10b981;
     --success-light: #d1fae5;
+    --success-text: #065f46;
     --error: #ef4444;
     --error-light: #fee2e2;
+    --error-text: #991b1b;
     --bg-code: #f1f5f9;
     --font-family: 'Inter', system-ui, sans-serif;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -39,6 +41,11 @@ body.dark-mode {
     --text-muted: #94a3b8;    /* Slate 400 */
     --border: #334155;        /* Slate 700 */
     --bg-code: #0f172a;
+    --primary-light: rgba(79, 70, 229, 0.25);
+    --success-light: rgba(16, 185, 129, 0.2);
+    --success-text: #34d399;
+    --error-light: rgba(239, 68, 68, 0.2);
+    --error-text: #f87171;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -421,9 +428,9 @@ body.dark-mode {
 }
 
 .option-btn:hover { border-color: var(--primary); background: var(--bg-main); }
-.option-btn.selected { border-color: var(--primary); background: var(--primary-light); }
-.option-btn.correct { border-color: var(--success); background: var(--success-light); color: #065f46; }
-.option-btn.incorrect { border-color: var(--error); background: var(--error-light); color: #991b1b; }
+.option-btn.selected { border-color: var(--primary); background: var(--primary-light); color: var(--primary); }
+.option-btn.correct { border-color: var(--success); background: var(--success-light); color: var(--success-text); }
+.option-btn.incorrect { border-color: var(--error); background: var(--error-light); color: var(--error-text); }
 
 /* Drag and Drop - Duolingo Style */
 .sentence-container {
@@ -475,8 +482,8 @@ body.dark-mode {
 }
 
 .draggable-word:active { cursor: grabbing; border-bottom-width: 1px; transform: translateY(2px); }
-.draggable-word.correct { border-color: var(--success) !important; background: var(--success-light) !important; color: #065f46 !important; }
-.draggable-word.incorrect { border-color: var(--error) !important; background: var(--error-light) !important; color: #991b1b !important; }
+.draggable-word.correct { border-color: var(--success) !important; background: var(--success-light) !important; color: var(--success-text) !important; }
+.draggable-word.incorrect { border-color: var(--error) !important; background: var(--error-light) !important; color: var(--error-text) !important; }
 
 /* Footer Quiz */
 .quiz-footer {
