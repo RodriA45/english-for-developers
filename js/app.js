@@ -36,11 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            const targetView = e.target.dataset.view || 'practica'; // start-btn goes to practica
+            if (btn.id === 'theme-toggle') return; // Ignorar el botón de tema para la navegación
+            
+            // Buscar el data-view (si hace clic en un icono o span dentro del botón)
+            const targetBtn = e.target.closest('button');
+            const targetView = targetBtn.dataset.view || 'practica'; // start-btn goes to practica
             
             // Update Active Classes
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-            if(e.target.classList.contains('nav-btn')) e.target.classList.add('active');
+            if(targetBtn.classList.contains('nav-btn')) targetBtn.classList.add('active');
             else document.querySelector('.practice-btn').classList.add('active');
 
             sections.forEach(s => s.classList.remove('active'));
