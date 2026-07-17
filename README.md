@@ -2,6 +2,8 @@
 
 ![English for Developers](https://img.shields.io/badge/English-For_Developers-blue?style=for-the-badge&logo=appveyor)
 
+![Preview](english.png)
+
 Una aplicación web interactiva diseñada para estudiantes de programación y desarrolladores que buscan mejorar y practicar su inglés técnico. Este proyecto está basado en un modelo de parcial real y cuenta con explicaciones teóricas y ejercicios prácticos de autoevaluación.
 
 ## 🌟 Características Principales
